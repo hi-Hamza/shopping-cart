@@ -39,7 +39,7 @@ const Product = () => {
                         <MDBDropdownMenu>
                             <MDBDropdownItem link>Menu item</MDBDropdownItem>
                             <MDBDropdownItem link>Menu item</MDBDropdownItem>
-                            <MDBDropdownItem link>Menu item</MDBDropdownItem>
+                            <MDBDropdownItem link>Mene item</MDBDropdownItem>
                         </MDBDropdownMenu>
                     </MDBDropdown>
                 </div>

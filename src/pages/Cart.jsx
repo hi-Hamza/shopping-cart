@@ -1,12 +1,13 @@
 import React from "react";
 import { useSelector , useDispatch } from "react-redux";
 import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
-import { remove } from "../redux/slice/CartSlice";
-import { totalQuantity , totalPrice } from "../redux/slice/CartSlice";
+import { remove  , increment ,decrement} from "../redux/slice/CartSlice";
+
+
 
 
 const Cart = () => {
-    const cartItem = useSelector((state) => state.cartData)
+    const {cart , totalQuantity ,totalPrice , count} = useSelector((state) => state.cartData)
 const dispatch = useDispatch();
 
 
@@ -25,7 +26,7 @@ const hundleRemove = (id) => {
 
 
                     {
-                        cartItem.map((crtitm) => (
+                        cart.map((crtitm) => (
                             <div className="cartCard flex justify-between items-center my-3">
 
                                 <div className="flex">
@@ -40,9 +41,9 @@ const hundleRemove = (id) => {
                                 </div>
 
                                 <div className="flex items-center gap-1">
-                                    <MDBBtn>-</MDBBtn>
-                                    <input type="text" value={crtitm.quantity} className="border-2 border-black w-7 rounded" />
-                                    <MDBBtn>+</MDBBtn>
+                                    <MDBBtn onClick={() => dispatch(decrement())}>-</MDBBtn>
+                                    <input type="text" value={count} className="border-2 border-black w-7 rounded" />
+                                    <MDBBtn onClick={() => dispatch(increment())}>+</MDBBtn>
                                 </div>
 
                             </div>
@@ -58,7 +59,7 @@ const hundleRemove = (id) => {
                     <h4 className="p-2 ">Summery</h4><hr />
                     <div className="flex justify-between items-center p-2">
                         <h3 className="text-2xl font-light">Quantity</h3>
-                        <h6 className="text-red-500">{totalQuantity}</h6>
+                        <h6 className="text-red-500">{cart.length}</h6>
                     </div>
                     <div className="flex justify-between items-center p-2">
                         <h3 className="text-2xl font-light">totle amount</h3>

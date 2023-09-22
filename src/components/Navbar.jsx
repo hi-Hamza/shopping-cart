@@ -11,7 +11,7 @@ import logo from '../assets/logo.jpg'
 const Navbar = () => {
     const [nav, setNav] = useState(true)
 
-    const item = useSelector((state) => state.cartData)
+    const {cart} = useSelector((state) => state.cartData)
 
     const navigate = useNavigate()
 
@@ -44,7 +44,7 @@ const Navbar = () => {
                         <div className="shppingCart relative">
                             <BsCart3 size={20} className="text-white " />
                             {
-                                item.length >= 1 ?   <div className="absolute top-0 left-2  text-white bg-green-400 border border-black rounded-3xl  px-2">{item.length}</div> : null
+                                cart.length >= 1 ?   <div className="absolute top-0 left-2 text-[1rem]  text-white bg-green-400 border border-black rounded-3xl  px-2">{cart.length}</div> : null
                             }
                            
                         </div>
