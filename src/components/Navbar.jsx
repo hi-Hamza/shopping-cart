@@ -27,7 +27,7 @@ const Navbar = () => {
                 <div class="flex flex-1 items-center justify-between  sm:items-stretch sm:justify-between mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                     {/* 1 div  */}
                     <div class="flex flex-start-0 items-center">
-                        <img class="h-8 w-auto" src={logo} alt="Your Company" />
+                        <img class="h-8 w-auto" src={logo} alt="Your Company"  onClick={() => navigate("/")}/>
                     </div>
 
                     {/* 2 idv  */}
@@ -35,18 +35,22 @@ const Navbar = () => {
                         <div class="flex space-x-4">
                             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" onClick={() => navigate("/")}>Home</a>
                             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" onClick={() => navigate("/cart")}>Cart</a>
-                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  onClick={() => navigate("/contact")}>Contact</a>
                         </div>
                     </div>
                     {/* 3 div  */}
 
-                    <div className="icons flex gap-5 items-center">
+                    <div className="icons flex space-x-4 items-center">
                         <div className="shppingCart relative">
-                            <BsCart3 size={20} className="text-white " />
+                            <BsCart3 size={20} className="text-white " onClick={() => navigate("/cart")}/>
                             {
                                 cart.length >= 1 ?   <div className="absolute top-0 left-2 text-[1rem]  text-white bg-green-400 border border-black rounded-3xl  px-2">{cart.length}</div> : null
                             }
                            
+                        </div>
+                        <div className="hidden sm:block">
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  onClick={() => navigate("/signin")}>Sign in</a>
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  onClick={() => navigate("/signup")}>Sign up</a>
                         </div>
 
                         <div className="menu text-white sm:hidden" onClick={hundleNav}>
@@ -61,13 +65,15 @@ const Navbar = () => {
                 {/* <!-- Mobile menu, show/hide based on menu state. --> */}
 
                 {
-                    !nav ? <div class="z-50 fixed top-0 left-0 bg-gray-600 w-1/2 h-full sm:hidden" id="mobile-menu">
+                    !nav ? <div class="z-50 fixed top-0 left-0 bg-gray-600 w-[80%] h-full sm:hidden" id="mobile-menu">
                         <div class="space-y-1 px-2 pb-3 pt-20">
                             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
 
-                            <a href="#" class="border-b border-gray-800  text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
-                            <a href="#" class="border-b border-gray-800 mt-4 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Cart</a>
-                            <a href="#" class="border-b border-gray-800 mt-4 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+                            <a href="#" class="border-b border-gray-800  text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium" onClick={() => navigate("/")}>Home</a>
+                            <a href="#" class="border-b border-gray-800 mt-4 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"onClick={() => navigate("/cart")}>Cart</a>
+                            <a href="#" class="border-b border-gray-800 mt-4 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"  onClick={() => navigate("/contact")}>Contact</a>
+                            <a href="#" class="border-b border-gray-800 mt-4 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"  onClick={() => navigate("/signin")}>Sign in</a>
+                            <a href="#" class="border-b border-gray-800 mt-4 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"  onClick={() => navigate("/signup")}>Sign up</a>
                         </div>
                     </div> : null
                 }

@@ -4,9 +4,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     cart: [],
+isloading :true,
     totalQuantity: 0,
     totalPrice: 0,
-    count : 0,
+    amount : 0,
 };
 
 const cartSlice = createSlice({
@@ -25,6 +26,7 @@ const cartSlice = createSlice({
         remove(state, action) {
             state.cart = state.cart.filter((item) => item.id !== action.payload)
         },
+      
       increment(state){
       
             state.count += 1

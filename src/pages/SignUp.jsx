@@ -1,11 +1,12 @@
 import React from "react";
 
 
-const DetailProduct = () => {
+const SignUp = () => {
     return(
         <>
+        sign up
         </>
     );
 };
 
-export default DetailProduct;
+export default SignUp;

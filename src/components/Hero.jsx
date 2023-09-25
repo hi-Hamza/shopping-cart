@@ -21,7 +21,7 @@ const Hero = () => {
    
     return (
         <>
-            <div className="main h-[84vh] mx-auto mt-20 mb-5 max-w-7xl flex" >
+            <div className="main h-[84vh] mx-auto mt-16 sm:mt-20 mb-5 max-w-7xl flex" >
                 {/* first div  */}
                 <div className="w-[100%]  lg:w-[70%] h-full " >
 
@@ -52,7 +52,7 @@ const Hero = () => {
                 {/* second div  */}
                 <div className="w-[30%] h-full hidden lg:block ">
 
-                    <div className="div1  w-[90%] h-[45%] mx-auto mt-1" >
+                    <div className="div1  w-[90%] h-[45%] mx-auto mt-3" >
 
                         <Swiper
                             pagination={{
@@ -71,7 +71,7 @@ const Hero = () => {
                         </Swiper>
                     </div>
 
-                    <div className="div1  w-[90%] h-[45%] mx-auto mt-5" >
+                    <div className="div1  w-[90%] h-[45%] mx-auto mt-4" >
 
                         <Swiper
                             pagination={{

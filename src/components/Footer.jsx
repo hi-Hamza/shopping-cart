@@ -2,13 +2,15 @@ import React from 'react';
 import {
   MDBFooter,
   MDBContainer,
-  MDBCol,
-  MDBRow,
+
   MDBIcon,
   MDBBtn
 } from 'mdb-react-ui-kit';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate()
+  
   return (
     <MDBFooter className='bg-gray-800 text-center text-white'>
       <MDBContainer className='p-4 pb-0'>
@@ -39,8 +41,8 @@ const Footer = () => {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © 2023 Copyright:
-        <a className='text-white' href='https://mdbootstrap.com/'>
+        © 2023 Developer : 
+        <a className='text-white' onClick={() => navigate("/owner")}>
          Muhammad Ali Hamza
         </a>
       </div>
