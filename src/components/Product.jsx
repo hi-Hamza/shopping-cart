@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem } from 'mdb-react-ui-kit';
+
 import '../css/card.css'
 import { BsCart3 } from 'react-icons/bs'
 import { getApi } from "../api/Api";
@@ -39,7 +39,7 @@ const Product = () => {
                  
                 </div>
                 {/* third div  */}
-                <div className="card-div w-80 mx-auto sm:w-full sm:mx-auto md:mx-auto md:max-w-7xl md:w-full lg:mx-auto lg:max-w-7xl lg:w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div className="card-div w-80 mx-auto sm:w-full sm:mx-auto md:mx-auto md:max-w-7xl md:w-full lg:mx-auto lg:max-w-7xl lg:w-full gap-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
 
                     {

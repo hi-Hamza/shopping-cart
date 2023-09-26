@@ -39,3 +39,27 @@ body{
   object-fit: cover;
 }
 
+
+
+
+
+
+
+
+.swiper2 {
+  width: 800px;
+}
+.slide {
+  height: 300px;
+
+  line-height: 300px;
+  text-align: center;
+}
+
+
+.product{
+  background-image: url(../src/assets/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

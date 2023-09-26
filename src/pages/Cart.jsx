@@ -30,7 +30,7 @@ const hundleRemove = (id) => {
                             <div className="cartCard flex justify-between items-center my-3">
 
                                 <div className="flex">
-                                    <img src={crtitm.image} alt="" className="w-[20vw] md:[10rem] object-cover " />
+                                    <img src={crtitm.image} alt="" className="w-[20vw] md:[10rem] h-52 object-contain object-center " />
                                     <div className="pl-3 pt-3">
                                         <h3 className="pb-1 text-[1rem] md:text-[2rem] lg;text-[3rem] ">{crtitm.title}</h3>
                                         <h5 className="pb-1 text-[0.8rem] md:text-[1.5rem] lg;text-[2.5rem] text-red-400">{crtitm.price}</h5>
