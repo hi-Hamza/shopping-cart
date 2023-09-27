@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector , useDispatch } from "react-redux";
 import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
-import { remove  , increment ,decrement} from "../redux/slice/CartSlice";
+import { increment, remove } from "../redux/slice/CartSlice";
 
 
 
 
 const Cart = () => {
-    const {cart ,totalPrice , count} = useSelector((state) => state.cartData)
+    const {cart ,quantity} = useSelector((state) => state.cartData)
 const dispatch = useDispatch();
 
 console.log(cart , "cartdata")
@@ -41,9 +41,9 @@ const hundleRemove = (id) => {
                                 </div>
 
                                 <div className="flex items-center gap-1">
-                                    <MDBBtn onClick={() => dispatch(decrement())}>-</MDBBtn>
-                                    <input type="text" value={count} className="border-2 border-black w-7 rounded" />
-                                    <MDBBtn onClick={() => dispatch(increment())}>+</MDBBtn>
+                                    <MDBBtn >-</MDBBtn>
+                                    <input type="text" value={quantity} className="border-2 border-black w-7 rounded" />
+                                    <MDBBtn >+</MDBBtn>
                                 </div>
 
                             </div>
@@ -63,7 +63,7 @@ const hundleRemove = (id) => {
                     </div>
                     <div className="flex justify-between items-center p-2">
                         <h3 className="text-2xl font-light">totle amount</h3>
-                        <h6 className="text-red-500">{totalPrice}</h6>
+                        <h6 className="text-red-500">{0}</h6>
                     </div>
                     <MDBBtn className="mx-5  md:mx-4 my-2 w-[80%]">Go To Chect Out</MDBBtn>
                 </div>

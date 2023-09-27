@@ -31,11 +31,11 @@ const Footer = () => {
           </MDBBtn>
 
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='linkedin-in' />
+            <MDBIcon fab icon='linkedin-in' onClick={() => navigate("/owner")}/>
           </MDBBtn>
 
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='github' />
+            <MDBIcon fab icon='github' onClick={() => alert("I LOVE YOU FAJAR")} />
           </MDBBtn>
         </section>
       </MDBContainer>

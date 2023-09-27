@@ -65,7 +65,7 @@ const Navbar = () => {
                 {/* <!-- Mobile menu, show/hide based on menu state. --> */}
 
                 {
-                    !nav ? <div class="z-50 transition duration-500 ease-in-out fixed top-0 left-0 bg-gray-600 w-[80%] h-full sm:hidden" id="mobile-menu">
+                    !nav ? <div class="z-50 transition-all duration-500 ease-in-out fixed top-0 left-0 bg-gray-600 w-[80%] h-full sm:hidden" id="mobile-menu">
                         <div class="space-y-1 px-2 pb-3 pt-20">
                             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
 

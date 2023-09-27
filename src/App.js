@@ -7,7 +7,7 @@ import ProductDetails from './pages/Productdetails';
 import Contact from './pages/Contact'
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-
+import Owner from './pages/Owner';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
     <Route path='/cart' element={<Cart/>}/>
     <Route path='/productdetails' element={<ProductDetails/>}/>
     <Route path='/contact' element={<Contact/>}/>
+    <Route path='/owner' element={<Owner/>}/>
     <Route path='/signin' element={<SignIn/>}/>
     <Route path='/signup' element={<SignUp/>}/>
   </Routes>
