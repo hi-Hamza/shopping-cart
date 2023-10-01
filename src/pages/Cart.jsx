@@ -10,13 +10,15 @@ const Cart = () => {
     const {cart ,quantity} = useSelector((state) => state.cartData)
 const dispatch = useDispatch();
 
-console.log(cart , "cartdata")
+
 
 const hundleRemove = (id) => {
     dispatch(remove(id))
 }
 
-    return (
+
+
+     return (
         <>
               {/* <h3 className="py-1 mx-auto max-w-7xl">Cart : Items </h3><hr /> */}
             <div className="main-div mt-12  md:mx-auto md:max-w-7xl md:mt-12  md:flex justify-around">

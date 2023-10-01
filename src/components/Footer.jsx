@@ -16,7 +16,7 @@ const Footer = () => {
       <MDBContainer className='p-4 pb-0'>
         <section className='mb-4'>
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='facebook-f' />
+            <MDBIcon fab icon='facebook-f' onClick={() => navigate("/adrefrnd")}/>
           </MDBBtn>
 
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
